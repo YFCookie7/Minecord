@@ -1,3 +1,8 @@
+#DISCORD_BOT file
+DISCORD_BOT/.env
+DISCORD_BOT/.vscode
+__pycache__/
+
 # User-specific stuff
 .idea/
 
