@@ -2,7 +2,7 @@ from discord.ext import commands
 import requests
 
 minecraftChannel = 1017700772466663487
-url = "http://localhost:5001/discord_message"
+url = "http://localhost:5001/minecraft_server"
 
 
 class onMessage(commands.Cog):
