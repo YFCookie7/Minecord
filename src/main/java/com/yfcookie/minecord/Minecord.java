@@ -6,12 +6,14 @@ public final class Minecord extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        getServer().getPluginManager().registerEvents(new PlayerListener(), this);
+        getServer().getPluginManager().registerEvents(new ChatListener(), this);
+        ChatSync.sendMessage("serverStart", "", "");
 
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        ChatSync.sendMessage("serverStop", "", "");
     }
 }

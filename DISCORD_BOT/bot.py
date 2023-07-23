@@ -29,10 +29,6 @@ async def send_embed_with_timeout(channel, embed, timeout):
         return False
 
 
-def getChannel():
-    return bot.get_channel(minecraftChannel)
-
-
 # Listen POST request from minecraft server
 @app.route("/discord_bot", methods=["POST"])
 def receive_message():
@@ -86,9 +82,9 @@ def receive_message():
             )
             return "Message sent to Discord channel!"
 
-        future = asyncio.run_coroutine_threadsafe(
-            send_message_with_timeout(channel, content, 5), loop
-        )
+        # future = asyncio.run_coroutine_threadsafe(
+        #     send_message_with_timeout(channel, content, 5), loop
+        # )
         if future.result():
             return "Message sent to Discord channel!"
         else:

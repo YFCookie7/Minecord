@@ -2,6 +2,7 @@
 DISCORD_BOT/.env
 DISCORD_BOT/.vscode
 __pycache__/
+.vscode
 
 # User-specific stuff
 .idea/
